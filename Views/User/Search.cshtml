@@ -1,0 +1,36 @@
+﻿@model SafeVault.Models.SearchViewModel
+
+@{
+    ViewData["Title"] = "Secure User Search";
+}
+
+<div class="container mt-4">
+    <h2>SafeVault Secure User Search</h2>
+
+    <p class="text-muted">
+        Search for a user using a parameterized SQL query.
+    </p>
+
+    <form asp-controller="User" asp-action="Search" method="post">
+        @Html.AntiForgeryToken()
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label asp-for="Username" class="form-label">Username</label>
+            <input asp-for="Username" class="form-control" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Search Securely
+        </button>
+    </form>
+
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-info mt-3">
+            @ViewBag.Message
+        </div>
+    }
+</div>

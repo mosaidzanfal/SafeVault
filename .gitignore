@@ -1,0 +1,30 @@
+## Ignore build outputs
+/bin/
+/obj/
+
+## Visual Studio files
+.vs/
+*.user
+*.suo
+
+## Rider
+.idea/
+
+## Test results
+TestResults/
+coverage*.xml
+*.coverage
+
+## User secrets (do not commit secrets.json)
+*.usersecrets
+
+## ASP.NET Core local configs
+appsettings.Development.json
+appsettings.*.Local.json
+
+## Logs
+*.log
+
+## Other artifacts
+*.db
+*.mdf

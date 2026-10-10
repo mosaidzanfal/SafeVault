@@ -1,0 +1,81 @@
+﻿@model SafeVault.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Secure Login";
+}
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">SafeVault Secure Login</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <form asp-controller="Account"
+                          asp-action="Login"
+                          method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        <div asp-validation-summary="All"
+                             class="text-danger mb-3">
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label asp-for="Username"
+                                   class="form-label"></label>
+
+                            <input asp-for="Username"
+                                   class="form-control"
+                                   autocomplete="username" />
+
+                            <span asp-validation-for="Username"
+                                  class="text-danger"></span>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label asp-for="Password"
+                                   class="form-label"></label>
+
+                            <input asp-for="Password"
+                                   type="password"
+                                   class="form-control"
+                                   autocomplete="current-password" />
+
+                            <span asp-validation-for="Password"
+                                  class="text-danger"></span>
+
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-primary w-100">
+
+                            Login Securely
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
