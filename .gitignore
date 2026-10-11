@@ -1,6 +1,5 @@
-## Ignore build outputs
-/bin/
-/obj/
+bin/
+obj/
 
 ## Visual Studio files
 .vs/

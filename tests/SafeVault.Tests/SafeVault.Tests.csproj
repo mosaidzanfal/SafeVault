@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
-    <RootNamespace>xUnit_Test_Project</RootNamespace>
+    <RootNamespace>SafeVault.Tests</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SafeVault.csproj" />
+    <ProjectReference Include="..\..\src\SafeVault\SafeVault.csproj" />
   </ItemGroup>
 
   <ItemGroup>

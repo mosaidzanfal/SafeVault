@@ -1,4 +1,8 @@
 <Solution>
-  <Project Path="SafeVault.csproj" />
-  <Project Path="../xUnit Test Project/xUnit Test Project.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/SafeVault/SafeVault.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SafeVault.Tests/SafeVault.Tests.csproj" />
+  </Folder>
 </Solution>

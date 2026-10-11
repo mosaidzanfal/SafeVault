@@ -29,7 +29,7 @@ This document summarizes the security audit, findings, mitigations, and remainin
 - Controllers/AccountController.cs — Login flow (rate limiting, validation, cookie creation).
 - Program.cs — cookie options, rate limiting and principal revalidation wiring.
 - Models/LoginViewModel.cs, Models/UserInput.cs, Models/SearchViewModel.cs — input validation.
-- ..\xUnit Test Project — tests refactored to avoid hard-coded secrets and to test security behavior.
+- tests/SafeVault.Tests — tests refactored to avoid hard-coded secrets and to test security behavior.
 
 ## 5. Root causes
 - Partial or inconsistent input validation across login and search flows.
